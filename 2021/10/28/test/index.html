@@ -104,7 +104,7 @@
           <h2 class="title-sub-wrap">
             <strong>万宇</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-10-14T12:57:38.285Z" itemprop="datePublished">2021-10-14</time>
+            <time  class="article-date" datetime="2021-10-28T14:00:25.774Z" itemprop="datePublished">2021-10-28</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -133,52 +133,7 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h2 id="git常用命令大全"><a href="#git常用命令大全" class="headerlink" title="git常用命令大全"></a>git常用命令大全</h2><p>git init     // 初始化仓库</p>
-<p>git add <file>  // 把文件file添加到仓库里</p>
-<p>git commit -m “提交记录说明” // 把文件提交到仓库里并进行说明</p>
-<p>git status // 查看仓库当前状态,是否有文件被修改</p>
-<p>git diff <file> // 查看文件详细的修改内容</p>
-<p>git log // 查看最近到最远的提交日志</p>
-<p>git reset –hard HEAD^ // 回退到上一个版本,HEAD表示当前版本,HEAD^表示上一个版本,以此类推.上100个版本写成HEAD~100</p>
-<p>git reset –hard 版本号 // 可以回到未来的版本号.即撤销.版本号不必写全.</p>
-<p>git reflog // 记录每一次的命令,可以用来查找版本号,防止遗忘.</p>
-<p>git diff HEAD – <file> // 查看工作区和版本库里面最新版本的区别。</p>
-<p>git restore <file> // 丢弃工作区的修改</p>
-<p>git checkout – <file> // 丢弃工作区的修改</p>
-<p>git restore –staged <file> // 把暂存区的修改撤销掉。</p>
-<p>git reset HEAD <fiel> // 把暂存区的修改撤销掉</p>
-<p>git rm <file> // 工作区删除文件后，使用该命令放入暂存区，和git add <file>的效果是一样的</p>
-<p>在terminal终端上或者Shell(window下打开git Bash)下，输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>创建SSH密钥。在用户主目录里找到.SSH文件，里面有<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件，这两个就是SSH Key的秘钥对，<code>id_rsa</code>是私钥，不能泄露出去，<code>id_rsa.pub</code>是公钥，可以放心地告诉任何人。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:name/rep.git</span><br></pre></td></tr></table></figure>
-
-<p>// name替换成你自己的GitHub账户名，rep是你GitHub上的仓库名称。此命令是让你的本地仓库关联到你的GitHub的远程库。origin是远程库的名称（默认）。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p> // 把当前分支的本地库的内容推送到远程库中。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:name/rep.git</span><br></pre></td></tr></table></figure>
-
-<p>// 同上，把你远程库里的内容克隆到你的本地仓库里。克隆可以采用多种协议，这里用的是SSH协议，还有http协议等等</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
-
-<p>// 创建dev分支，同时切换到dev分支。相当于以下命令。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch dev    // 创建dev分支</span><br><span class="line">git checkout dev  // 切换到dev分支</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git branch       // 列出所有分支</span><br><span class="line"></span><br><span class="line">git checkout master    // 切换到master分支</span><br><span class="line">git merge dev    // 把dev分支合并到你此时的分支(master)</span><br><span class="line">git branch -d dev   // 删除dev分支</span><br><span class="line"></span><br><span class="line">git switch -c dev    // 创建dev分支，并切换到dev分支</span><br><span class="line">git switch master    // 切换到master分支</span><br></pre></td></tr></table></figure>
-
-<p>小结：</p>
-<p>Git鼓励大量使用分支：</p>
-<p>查看分支：<code>git branch</code></p>
-<p>创建分支：<code>git branch &lt;name&gt;</code></p>
-<p>切换分支：<code>git checkout &lt;name&gt;</code>或者<code>git switch &lt;name&gt;</code></p>
-<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code>或者<code>git switch -c &lt;name&gt;</code></p>
-<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></p>
-<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
-<hr>
-<p><code>git log --graph</code>    // 看到分支合并图。</p>
-
+        <h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2>
       </section>
 
       
