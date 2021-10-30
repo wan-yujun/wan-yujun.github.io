@@ -184,7 +184,7 @@
 <li>首先在用户主目录查看有没有.ssh目录，也就是C:\user\home\.ssh(这里换成你自己的路径)。</li>
 <li>没有的话，打开Shell(Windows下打开Git Bash)，创建SSH Key:</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;youremail@example.com&quot;</span>	// 引号里填写你之前设置的全局配置的邮箱</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;youremail@example.com&quot;</span>	</span><br><span class="line">			// 引号里填写你之前设置的全局配置的邮箱</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li><p>一路回车、yes即可。</p>
@@ -213,7 +213,7 @@
 
 <h2 id="git查看分支"><a href="#git查看分支" class="headerlink" title="git查看分支"></a>git查看分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure>
 
-<h2 id="git合并分支"><a href="#git合并分支" class="headerlink" title="git合并分支"></a>git合并分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git merge dev	  // (快速合并)用于把指定分支合并到当前分支，即把dev分支合并到你现在的分支</span><br><span class="line">$ git merge --no-ff -m <span class="string">&quot;merge with no-ff&quot;</span> dev </span><br><span class="line">				  // 不使用快速合并模式，并且创建一个新commit</span><br></pre></td></tr></table></figure>
+<h2 id="git合并分支"><a href="#git合并分支" class="headerlink" title="git合并分支"></a>git合并分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git merge dev  // (快速合并)把指定分支合并到当前分支，即把dev分支合并到你现在的分支</span><br><span class="line">$ git merge --no-ff -m <span class="string">&quot;merge with no-ff&quot;</span> dev </span><br><span class="line">				 // 不使用快速合并模式，并且创建一个新commit</span><br></pre></td></tr></table></figure>
 
 <h2 id="git删除分支"><a href="#git删除分支" class="headerlink" title="git删除分支"></a>git删除分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d dev    // 如果已经master已经合并了dev分支，不报错，否则，报错</span><br><span class="line">$ git branch -D dev	   // 无论有没有合并，强制删除dev分支</span><br></pre></td></tr></table></figure>
 
