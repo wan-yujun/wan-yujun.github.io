@@ -104,7 +104,7 @@
           <h2 class="title-sub-wrap">
             <strong>万宇</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-10-29T13:38:09.186Z" itemprop="datePublished">2021-10-29</time>
+            <time  class="article-date" datetime="2021-10-30T06:59:05.000Z" itemprop="datePublished">2021-10-30</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -185,7 +185,7 @@
 </li>
 <li><p>没有的话，打开Shell(Windows下打开Git Bash)，创建SSH Key:</p>
 </li>
-<li><p>```bash<br>$ ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#111;&#117;&#114;&#101;&#x6d;&#97;&#x69;&#108;&#64;&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#117;&#114;&#101;&#x6d;&#97;&#x69;&#108;&#64;&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a>“    // 引号里填写你之前设置的全局配置的邮箱</p>
+<li><p>```bash<br>$ ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#x6f;&#117;&#114;&#101;&#x6d;&#97;&#105;&#x6c;&#x40;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#x6d;">&#x79;&#x6f;&#117;&#114;&#101;&#x6d;&#97;&#105;&#x6c;&#x40;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#x6d;</a>“    // 引号里填写你之前设置的全局配置的邮箱</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 一路回车、yes即可。</span><br><span class="line"></span><br><span class="line">5. 在用户主目录找到.ssh目录。里面有两个文件。**id_rsa**和**id_rsa.pub**。这两个就是SSH Key的秘钥对，**id_rsa**是私钥，不能泄露出去，**id_rsa.pub**是公钥，可以放心地告诉任何人。</span><br><span class="line"></span><br><span class="line">6. 进入Github，登录账户，进入Settings里，找到SSH，填写任意title，在key文本框里粘贴**id_rsa.pub**内容</span><br><span class="line"></span><br><span class="line">7. 你可以通过Shell(Windows下打开Git Bash)，进入到.ssh目录，然后输入 **$ cat id_rsa.pub**获取内容</span><br><span class="line"></span><br><span class="line">## 本地仓库关联到远程库</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">$ git remote add origin git@github.com:wuxin-123/learngit.git </span><br></pre></td></tr></table></figure></li>
 </ol>
 <p><strong>wuxin-123</strong>换成你自己的账户名，<strong>origin</strong>是远程库名</p>
