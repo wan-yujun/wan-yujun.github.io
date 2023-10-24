@@ -23,12 +23,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wuxin-123.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"livere","storage":true,"lazyload":false,"nav":null,"activeClass":"livere"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="git全局配置$ git config --global user.name &quot;Your Name&quot; $ git config --global user.email &quot;email@example.com&quot;  git初始化$ git init  git添加到暂存区(stage\index)">
+<meta name="description" content="git全局配置 $ git config --global user.name &quot;Your Name&quot; $ git config --global user.email &quot;email@example.com&quot; git初始化 $ git init git添加到暂存区(stage\index)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git常用指令笔记">
 <meta property="og:url" content="http://wuxin-123.github.io/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E7%AC%94%E8%AE%B0/">
 <meta property="og:site_name" content="羽君">
-<meta property="og:description" content="git全局配置$ git config --global user.name &quot;Your Name&quot; $ git config --global user.email &quot;email@example.com&quot;  git初始化$ git init  git添加到暂存区(stage\index)">
+<meta property="og:description" content="git全局配置 $ git config --global user.name &quot;Your Name&quot; $ git config --global user.email &quot;email@example.com&quot; git初始化 $ git init git添加到暂存区(stage\index)">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://wuxin-123.github.io/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E7%AC%94%E8%AE%B0/git.jpg">
 <meta property="article:published_time" content="2021-10-30T06:59:05.000Z">
@@ -126,14 +126,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">git全局配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">git初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%B7%BB%E5%8A%A0%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA-stage-index"><span class="nav-number">3.</span> <span class="nav-text">git添加到暂存区(stage\index)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E4%B8%80%E9%94%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E7%89%88%E6%9C%AC%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">git一键提交到版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E7%8A%B6%E6%80%81%E6%9F%A5%E7%9C%8B"><span class="nav-number">5.</span> <span class="nav-text">git状态查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E5%89%8D%E5%90%8E%E7%9A%84%E4%B8%8D%E5%90%8C"><span class="nav-number">6.</span> <span class="nav-text">git查看文件修改前后的不同</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%88%B0%E7%89%88%E6%9C%AC%E5%BA%93%E7%9A%84%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95"><span class="nav-number">7.</span> <span class="nav-text">git查看提交到版本库的历史记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%BA%93"><span class="nav-number">8.</span> <span class="nav-text">git回退版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5%E6%9F%90%E4%B8%AA%E7%89%88%E6%9C%AC"><span class="nav-number">9.</span> <span class="nav-text">git回到未来某个版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%89%A7%E8%A1%8C%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">10.</span> <span class="nav-text">git记录每次执行的命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E7%89%88%E6%9C%AC%E5%BA%93%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">11.</span> <span class="nav-text">git版本库结构体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%9F%A5%E7%9C%8B%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93%E9%87%8C%E6%96%87%E4%BB%B6%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">12.</span> <span class="nav-text">git查看工作区和版本库里文件的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E4%B8%A2%E5%BC%83%E5%B7%A5%E4%BD%9C%E5%8C%BA%E7%9A%84%E4%BF%AE%E6%94%B9-%E6%B2%A1%E6%9C%89%E6%8F%90%E4%BA%A4%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-number">13.</span> <span class="nav-text">git丢弃工作区的修改(没有提交到暂存区)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E4%B8%A2%E5%BC%83%E6%9A%82%E5%AD%98%E5%8C%BA%E7%9A%84%E6%96%87%E4%BB%B6-%E9%87%8D%E6%96%B0%E6%94%BE%E5%9B%9E%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="nav-number">14.</span> <span class="nav-text">git丢弃暂存区的文件(重新放回工作区)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="nav-number">15.</span> <span class="nav-text">git删除文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96SSH%E5%AF%86%E9%92%A5"><span class="nav-number">16.</span> <span class="nav-text">获取SSH密钥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%85%B3%E8%81%94%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="nav-number">17.</span> <span class="nav-text">本地仓库关联到远程库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%8E%A8%E9%80%81%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="nav-number">18.</span> <span class="nav-text">git推送远程库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%BA%93%E4%BF%A1%E6%81%AF"><span class="nav-number">19.</span> <span class="nav-text">查看远程库信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E5%BA%93-%E5%AE%9E%E9%99%85%E4%B8%8A%E6%98%AF%E5%8F%96%E6%B6%88%E6%9C%AC%E5%9C%B0%E5%BA%93%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%BA%93%E7%9A%84%E5%85%B3%E8%81%94"><span class="nav-number">20.</span> <span class="nav-text">删除远程库(实际上是取消本地库与远程库的关联)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="nav-number">21.</span> <span class="nav-text">克隆远程库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF"><span class="nav-number">22.</span> <span class="nav-text">git新建分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%9F%A5%E7%9C%8B%E5%88%86%E6%94%AF"><span class="nav-number">23.</span> <span class="nav-text">git查看分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="nav-number">24.</span> <span class="nav-text">git合并分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="nav-number">25.</span> <span class="nav-text">git删除分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97"><span class="nav-number">26.</span> <span class="nav-text">git查看日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E9%9A%90%E8%97%8F%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%92%8C%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-number">27.</span> <span class="nav-text">git隐藏当前工作区和暂存区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E9%9A%90%E8%97%8F%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%92%8C%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-number">28.</span> <span class="nav-text">查看隐藏的工作区和暂存区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E5%8E%9F%E5%85%88%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%8E%B0%E5%9C%BA"><span class="nav-number">29.</span> <span class="nav-text">恢复原先的工作现场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E4%BB%8E%E8%BF%9C%E7%A8%8B%E5%BA%93%E6%8A%93%E5%8F%96"><span class="nav-number">30.</span> <span class="nav-text">git从远程库抓取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E6%A0%87%E7%AD%BE"><span class="nav-number">31.</span> <span class="nav-text">新建标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%A0%87%E7%AD%BE%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="nav-number">32.</span> <span class="nav-text">查看标签详细信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%B8%A6%E6%9C%89%E8%AF%B4%E6%98%8E%E7%9A%84%E6%A0%87%E7%AD%BE"><span class="nav-number">33.</span> <span class="nav-text">创建带有说明的标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%A0%87%E7%AD%BE"><span class="nav-number">34.</span> <span class="nav-text">删除标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E9%80%81%E6%A0%87%E7%AD%BE"><span class="nav-number">35.</span> <span class="nav-text">推送标签</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">git全局配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">git初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%B7%BB%E5%8A%A0%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BAstageindex"><span class="nav-number">3.</span> <span class="nav-text">git添加到暂存区(stage\index)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E4%B8%80%E9%94%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E7%89%88%E6%9C%AC%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">git一键提交到版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E7%8A%B6%E6%80%81%E6%9F%A5%E7%9C%8B"><span class="nav-number">5.</span> <span class="nav-text">git状态查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E5%89%8D%E5%90%8E%E7%9A%84%E4%B8%8D%E5%90%8C"><span class="nav-number">6.</span> <span class="nav-text">git查看文件修改前后的不同</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%88%B0%E7%89%88%E6%9C%AC%E5%BA%93%E7%9A%84%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95"><span class="nav-number">7.</span> <span class="nav-text">git查看提交到版本库的历史记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%BA%93"><span class="nav-number">8.</span> <span class="nav-text">git回退版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5%E6%9F%90%E4%B8%AA%E7%89%88%E6%9C%AC"><span class="nav-number">9.</span> <span class="nav-text">git回到未来某个版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%89%A7%E8%A1%8C%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">10.</span> <span class="nav-text">git记录每次执行的命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E7%89%88%E6%9C%AC%E5%BA%93%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">11.</span> <span class="nav-text">git版本库结构体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%9F%A5%E7%9C%8B%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93%E9%87%8C%E6%96%87%E4%BB%B6%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">12.</span> <span class="nav-text">git查看工作区和版本库里文件的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E4%B8%A2%E5%BC%83%E5%B7%A5%E4%BD%9C%E5%8C%BA%E7%9A%84%E4%BF%AE%E6%94%B9%E6%B2%A1%E6%9C%89%E6%8F%90%E4%BA%A4%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-number">13.</span> <span class="nav-text">git丢弃工作区的修改(没有提交到暂存区)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E4%B8%A2%E5%BC%83%E6%9A%82%E5%AD%98%E5%8C%BA%E7%9A%84%E6%96%87%E4%BB%B6%E9%87%8D%E6%96%B0%E6%94%BE%E5%9B%9E%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="nav-number">14.</span> <span class="nav-text">git丢弃暂存区的文件(重新放回工作区)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="nav-number">15.</span> <span class="nav-text">git删除文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96ssh%E5%AF%86%E9%92%A5"><span class="nav-number">16.</span> <span class="nav-text">获取SSH密钥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%85%B3%E8%81%94%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="nav-number">17.</span> <span class="nav-text">本地仓库关联到远程库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%8E%A8%E9%80%81%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="nav-number">18.</span> <span class="nav-text">git推送远程库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%BA%93%E4%BF%A1%E6%81%AF"><span class="nav-number">19.</span> <span class="nav-text">查看远程库信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%AE%9E%E9%99%85%E4%B8%8A%E6%98%AF%E5%8F%96%E6%B6%88%E6%9C%AC%E5%9C%B0%E5%BA%93%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%BA%93%E7%9A%84%E5%85%B3%E8%81%94"><span class="nav-number">20.</span> <span class="nav-text">删除远程库(实际上是取消本地库与远程库的关联)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="nav-number">21.</span> <span class="nav-text">克隆远程库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF"><span class="nav-number">22.</span> <span class="nav-text">git新建分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%9F%A5%E7%9C%8B%E5%88%86%E6%94%AF"><span class="nav-number">23.</span> <span class="nav-text">git查看分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="nav-number">24.</span> <span class="nav-text">git合并分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="nav-number">25.</span> <span class="nav-text">git删除分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97"><span class="nav-number">26.</span> <span class="nav-text">git查看日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E9%9A%90%E8%97%8F%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%92%8C%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-number">27.</span> <span class="nav-text">git隐藏当前工作区和暂存区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E9%9A%90%E8%97%8F%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%92%8C%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-number">28.</span> <span class="nav-text">查看隐藏的工作区和暂存区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E5%8E%9F%E5%85%88%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%8E%B0%E5%9C%BA"><span class="nav-number">29.</span> <span class="nav-text">恢复原先的工作现场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E4%BB%8E%E8%BF%9C%E7%A8%8B%E5%BA%93%E6%8A%93%E5%8F%96"><span class="nav-number">30.</span> <span class="nav-text">git从远程库抓取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E6%A0%87%E7%AD%BE"><span class="nav-number">31.</span> <span class="nav-text">新建标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%A0%87%E7%AD%BE%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="nav-number">32.</span> <span class="nav-text">查看标签详细信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%B8%A6%E6%9C%89%E8%AF%B4%E6%98%8E%E7%9A%84%E6%A0%87%E7%AD%BE"><span class="nav-number">33.</span> <span class="nav-text">创建带有说明的标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%A0%87%E7%AD%BE"><span class="nav-number">34.</span> <span class="nav-text">删除标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E9%80%81%E6%A0%87%E7%AD%BE"><span class="nav-number">35.</span> <span class="nav-text">推送标签</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="羽君的个人站"
-      src="/images/mine.gif">
+      src="/images/personal.gif">
   <p class="site-author-name" itemprop="name">羽君的个人站</p>
   <div class="site-description" itemprop="description">在科技的领域里,只有不断学习和探索,才能跟上时代的步伐</div>
 </div>
@@ -141,7 +141,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -195,7 +195,7 @@
     <link itemprop="mainEntityOfPage" href="http://wuxin-123.github.io/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/mine.gif">
+      <meta itemprop="image" content="/images/personal.gif">
       <meta itemprop="name" content="羽君的个人站">
       <meta itemprop="description" content="在科技的领域里,只有不断学习和探索,才能跟上时代的步伐">
     </span>
@@ -251,46 +251,50 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="git全局配置"><a href="#git全局配置" class="headerlink" title="git全局配置"></a>git全局配置</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git config --global user.name &quot;Your Name&quot;
+        <h2 id="git全局配置">git全局配置</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git config --global user.name &quot;Your Name&quot;
 $ git config --global user.email &quot;email@example.com&quot;</code></pre>
-
-<h2 id="git初始化"><a href="#git初始化" class="headerlink" title="git初始化"></a>git初始化</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git init</code></pre>
-
-<h2 id="git添加到暂存区-stage-index"><a href="#git添加到暂存区-stage-index" class="headerlink" title="git添加到暂存区(stage\index)"></a>git添加到暂存区(stage\index)</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git add file	  &#x2F;&#x2F; file填写你自己的文件名</code></pre>
-
-<h2 id="git一键提交到版本库"><a href="#git一键提交到版本库" class="headerlink" title="git一键提交到版本库"></a>git一键提交到版本库</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git commit -m &quot;此内容为提交的说明&quot;   &#x2F;&#x2F; 此命令可以一键提交很多文件</code></pre>
-
-<h2 id="git状态查看"><a href="#git状态查看" class="headerlink" title="git状态查看"></a>git状态查看</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git status</code></pre>
-
-<h2 id="git查看文件修改前后的不同"><a href="#git查看文件修改前后的不同" class="headerlink" title="git查看文件修改前后的不同"></a>git查看文件修改前后的不同</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git diff file		&#x2F;&#x2F; file填写你自己修改了的文件名</code></pre>
-
-<h2 id="git查看提交到版本库的历史记录"><a href="#git查看提交到版本库的历史记录" class="headerlink" title="git查看提交到版本库的历史记录"></a>git查看提交到版本库的历史记录</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git log		&#x2F;&#x2F; 记录包括版本号、作者、时间、提交说明
+<h2 id="git初始化">git初始化</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git init</code></pre>
+<h2 id="git添加到暂存区stageindex">git添加到暂存区(stage\index)</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git add file	  &#x2F;&#x2F; file填写你自己的文件名</code></pre>
+<h2 id="git一键提交到版本库">git一键提交到版本库</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git commit -m &quot;此内容为提交的说明&quot;   &#x2F;&#x2F; 此命令可以一键提交很多文件</code></pre>
+<h2 id="git状态查看">git状态查看</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git status</code></pre>
+<h2 id="git查看文件修改前后的不同">git查看文件修改前后的不同</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git diff file		&#x2F;&#x2F; file填写你自己修改了的文件名</code></pre>
+<h2 id="git查看提交到版本库的历史记录">git查看提交到版本库的历史记录</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git log		&#x2F;&#x2F; 记录包括版本号、作者、时间、提交说明
 $ git log --pretty&#x3D;oneline	&#x2F;&#x2F; 一行显示版本号和提交说明</code></pre>
-
-<h2 id="git回退版本库"><a href="#git回退版本库" class="headerlink" title="git回退版本库"></a>git回退版本库</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git reset --hard HEAD^  &#x2F;&#x2F; 回退到上一个版本，HEAD^^上上个版本
+<h2 id="git回退版本库">git回退版本库</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git reset --hard HEAD^  &#x2F;&#x2F; 回退到上一个版本，HEAD^^上上个版本
 $ git reset --hard HEAD~1   &#x2F;&#x2F; 回退到上一个版本，数字代表回退到上几个版本号</code></pre>
-
-<h2 id="git回到未来某个版本"><a href="#git回到未来某个版本" class="headerlink" title="git回到未来某个版本"></a>git回到未来某个版本</h2><p>当执行了上述回退版本库的命令后，如果想再次回到原先的版本库。可以执行下面命令。</p>
+<h2 id="git回到未来某个版本">git回到未来某个版本</h2>
+<p>当执行了上述回退版本库的命令后，如果想再次回到原先的版本库。可以执行下面命令。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git reset --hard 版本号	 &#x2F;&#x2F; 输入想回去的原先的版本号，输入前几位就行了。</code></pre>
-
-<h2 id="git记录每次执行的命令"><a href="#git记录每次执行的命令" class="headerlink" title="git记录每次执行的命令"></a>git记录每次执行的命令</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git reflog
+<h2 id="git记录每次执行的命令">git记录每次执行的命令</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git reflog
 e475afc HEAD@&#123;1&#125;: reset: moving to HEAD^
 1094adb (HEAD -&gt; master) HEAD@&#123;2&#125;: commit: append GPL
 e475afc HEAD@&#123;3&#125;: commit: add distributed
 eaadf4e HEAD@&#123;4&#125;: commit (initial): wrote a readme file</code></pre>
-
-<h2 id="git版本库结构体"><a href="#git版本库结构体" class="headerlink" title="git版本库结构体"></a>git版本库结构体</h2><p><img src="git.jpg" alt="git"></p>
-<h2 id="git查看工作区和版本库里文件的区别"><a href="#git查看工作区和版本库里文件的区别" class="headerlink" title="git查看工作区和版本库里文件的区别"></a>git查看工作区和版本库里文件的区别</h2><p>前提是工作区文件和版本库文件是不同的。</p>
+<h2 id="git版本库结构体">git版本库结构体</h2>
+<figure>
+<img src="git.jpg" alt="git"><figcaption>git</figcaption>
+</figure>
+<h2 id="git查看工作区和版本库里文件的区别">git查看工作区和版本库里文件的区别</h2>
+<p>前提是工作区文件和版本库文件是不同的。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git diff HEAD -- file		&#x2F;&#x2F; file填写你自己的文件名</code></pre>
-
-<h2 id="git丢弃工作区的修改-没有提交到暂存区"><a href="#git丢弃工作区的修改-没有提交到暂存区" class="headerlink" title="git丢弃工作区的修改(没有提交到暂存区)"></a>git丢弃工作区的修改(没有提交到暂存区)</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git checkout -- file 		&#x2F;&#x2F; file填写你自己的文件名
+<h2 id="git丢弃工作区的修改没有提交到暂存区">git丢弃工作区的修改(没有提交到暂存区)</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git checkout -- file 		&#x2F;&#x2F; file填写你自己的文件名
 $ git restore file			&#x2F;&#x2F; file填写你自己的文件名</code></pre>
-
-<h2 id="git丢弃暂存区的文件-重新放回工作区"><a href="#git丢弃暂存区的文件-重新放回工作区" class="headerlink" title="git丢弃暂存区的文件(重新放回工作区)"></a>git丢弃暂存区的文件(重新放回工作区)</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git restore --staged file    	&#x2F;&#x2F; file填写你自己的文件名
+<h2 id="git丢弃暂存区的文件重新放回工作区">git丢弃暂存区的文件(重新放回工作区)</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git restore --staged file    	&#x2F;&#x2F; file填写你自己的文件名
 $ git reset HEAD file			&#x2F;&#x2F; file填写你自己的文件名</code></pre>
-
-<h2 id="git删除文件"><a href="#git删除文件" class="headerlink" title="git删除文件"></a>git删除文件</h2><p>分为以下两个情况：</p>
-<ol>
+<h2 id="git删除文件">git删除文件</h2>
+<p>分为以下两个情况：</p>
+<ol type="1">
 <li>在工作区删除文件时：</li>
 </ol>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ rm test			&#x2F;&#x2F; test要删除的文件，你自己可以修改
@@ -300,9 +304,8 @@ Changes not staged for commit:
   (use &quot;git add&#x2F;rm &lt;file&gt;...&quot; to update what will be committed)
   (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
         deleted:    test		&#x2F;&#x2F; 这里deleted:    test   应该是红色的</code></pre>
-
 <p>上面情况就相当于修改了工作区里的文件，然后可以进行add提交或者restore恢复。</p>
-<ol start="2">
+<ol start="2" type="1">
 <li>在工作区提交删除文件的操作时</li>
 </ol>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git rm test		&#x2F;&#x2F; test要删除的文件，你自己可以修改
@@ -311,90 +314,84 @@ On branch master
 Changes to be committed:
   (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
         deleted:    test		&#x2F;&#x2F; 这里deleted:    test   应该是绿色的</code></pre>
-
-<p>上面的 $ git rm test 命令实际上执行了两步，删除文件和提交文件到暂存区。所以当你执行命令 $ git restore –staged test时，会回到第(1)种情况的status。</p>
+<p>上面的 $ git rm test 命令实际上执行了两步，删除文件和提交文件到暂存区。所以当你执行命令 $ git restore --staged test时，会回到第(1)种情况的status。</p>
 <p>3.恢复到最新版本</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git checkout -- test</code></pre>
-
 <p><strong>git checkout</strong>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</p>
 <p>ps：但是当工作区的文件提交到暂存区的时候(也就是当属于第(2)种情况的时候)，用该命令会报错。</p>
-<h2 id="获取SSH密钥"><a href="#获取SSH密钥" class="headerlink" title="获取SSH密钥"></a>获取SSH密钥</h2><ol>
-<li>首先在用户主目录查看有没有.ssh目录，也就是C:\user\home\.ssh(这里换成你自己的路径)。</li>
+<h2 id="获取ssh密钥">获取SSH密钥</h2>
+<ol type="1">
+<li>首先在用户主目录查看有没有.ssh目录，也就是C:\.ssh(这里换成你自己的路径)。</li>
 <li>没有的话，打开Shell(Windows下打开Git Bash)，创建SSH Key:</li>
 </ol>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;	
 			&#x2F;&#x2F; 引号里填写你之前设置的全局配置的邮箱</code></pre>
-
-<ol start="3">
-<li><p>一路回车、yes即可。</p>
-</li>
-<li><p>在用户主目录找到.ssh目录。里面有两个文件。<strong>id_rsa</strong>和<strong>id_rsa.pub</strong>。这两个就是SSH Key的秘钥对，<strong>id_rsa</strong>是私钥，不能泄露出去，<strong>id_rsa.pub</strong>是公钥，可以放心地告诉任何人。</p>
-</li>
-<li><p>进入Github，登录账户，进入Settings里，找到SSH，填写任意title，在key文本框里粘贴<strong>id_rsa.pub</strong>内容</p>
-</li>
-<li><p>你可以通过Shell(Windows下打开Git Bash)，进入到.ssh目录，然后输入 <strong>$ cat id_rsa.pub</strong>获取内容</p>
-</li>
+<ol start="3" type="1">
+<li><p>一路回车、yes即可。</p></li>
+<li><p>在用户主目录找到.ssh目录。里面有两个文件。<strong>id_rsa</strong>和<strong>id_rsa.pub</strong>。这两个就是SSH Key的秘钥对，<strong>id_rsa</strong>是私钥，不能泄露出去，<strong>id_rsa.pub</strong>是公钥，可以放心地告诉任何人。</p></li>
+<li><p>进入Github，登录账户，进入Settings里，找到SSH，填写任意title，在key文本框里粘贴<strong>id_rsa.pub</strong>内容</p></li>
+<li><p>你可以通过Shell(Windows下打开Git Bash)，进入到.ssh目录，然后输入 <strong>$ cat id_rsa.pub</strong>获取内容</p></li>
 </ol>
-<h2 id="本地仓库关联到远程库"><a href="#本地仓库关联到远程库" class="headerlink" title="本地仓库关联到远程库"></a>本地仓库关联到远程库</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git remote add origin git@github.com:wuxin-123&#x2F;learngit.git </code></pre>
-
+<h2 id="本地仓库关联到远程库">本地仓库关联到远程库</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git remote add origin git@github.com:wuxin-123&#x2F;learngit.git </code></pre>
 <p><strong>wuxin-123</strong>换成你自己的账户名，<strong>origin</strong>是远程库名</p>
-<h2 id="git推送远程库"><a href="#git推送远程库" class="headerlink" title="git推送远程库"></a>git推送远程库</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git push origin master	&#x2F;&#x2F; 把本地master分支的版本库的内容推送到远程库里</code></pre>
-
-<h2 id="查看远程库信息"><a href="#查看远程库信息" class="headerlink" title="查看远程库信息"></a>查看远程库信息</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git remote -v</code></pre>
-
-<h2 id="删除远程库-实际上是取消本地库与远程库的关联"><a href="#删除远程库-实际上是取消本地库与远程库的关联" class="headerlink" title="删除远程库(实际上是取消本地库与远程库的关联)"></a>删除远程库(实际上是取消本地库与远程库的关联)</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git remote rm origin</code></pre>
-
-<h2 id="克隆远程库"><a href="#克隆远程库" class="headerlink" title="克隆远程库"></a>克隆远程库</h2><p>git支持多种协议，下面换成https协议的URL也是可以的。</p>
+<h2 id="git推送远程库">git推送远程库</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git push origin master	&#x2F;&#x2F; 把本地master分支的版本库的内容推送到远程库里</code></pre>
+<h2 id="查看远程库信息">查看远程库信息</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git remote -v</code></pre>
+<h2 id="删除远程库实际上是取消本地库与远程库的关联">删除远程库(实际上是取消本地库与远程库的关联)</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git remote rm origin</code></pre>
+<h2 id="克隆远程库">克隆远程库</h2>
+<p>git支持多种协议，下面换成https协议的URL也是可以的。</p>
 <p>// wuxin-123改成你自己的Github账户名</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git clone git@github.com:wuxin-123&#x2F;gitskills.git </code></pre>
-
-<h2 id="git新建分支"><a href="#git新建分支" class="headerlink" title="git新建分支"></a>git新建分支</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git checkout -b dev	&#x2F;&#x2F; 创建dev分支并切换到dev分支。(不推荐使用)
+<h2 id="git新建分支">git新建分支</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git checkout -b dev	&#x2F;&#x2F; 创建dev分支并切换到dev分支。(不推荐使用)
 相当于
 $ git branch dev		&#x2F;&#x2F; 创建dev分支
 $ git checkout dev		&#x2F;&#x2F; 切换到dev分支。(不推荐)
 
 $ git switch -c dev		&#x2F;&#x2F; 创建dev分支并切换到dev分支。(推荐)
 $ git switch dev		&#x2F;&#x2F; 切换到dev分支。(推荐)</code></pre>
-
-<h2 id="git查看分支"><a href="#git查看分支" class="headerlink" title="git查看分支"></a>git查看分支</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git branch</code></pre>
-
-<h2 id="git合并分支"><a href="#git合并分支" class="headerlink" title="git合并分支"></a>git合并分支</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git merge dev  &#x2F;&#x2F; (快速合并)把指定分支合并到当前分支，即把dev分支合并到你现在的分支
+<h2 id="git查看分支">git查看分支</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git branch</code></pre>
+<h2 id="git合并分支">git合并分支</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git merge dev  &#x2F;&#x2F; (快速合并)把指定分支合并到当前分支，即把dev分支合并到你现在的分支
 $ git merge --no-ff -m &quot;merge with no-ff&quot; dev 
 				 &#x2F;&#x2F; 不使用快速合并模式，并且创建一个新commit</code></pre>
-
-<h2 id="git删除分支"><a href="#git删除分支" class="headerlink" title="git删除分支"></a>git删除分支</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git branch -d dev    &#x2F;&#x2F; 如果已经master已经合并了dev分支，不报错，否则，报错
+<h2 id="git删除分支">git删除分支</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git branch -d dev    &#x2F;&#x2F; 如果已经master已经合并了dev分支，不报错，否则，报错
 $ git branch -D dev	   &#x2F;&#x2F; 无论有没有合并，强制删除dev分支</code></pre>
-
-<h2 id="git查看日志"><a href="#git查看日志" class="headerlink" title="git查看日志"></a>git查看日志</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git log --graph --pretty&#x3D;oneline --abbrev-commit</code></pre>
-
-<p><strong>–graph</strong>可以查看提交历史记录图，<strong>pretty=oneline</strong>之前介绍过，就是一行输出。<strong>abbrev-commit</strong>就是输出版本号的前几位。</p>
-<h2 id="git隐藏当前工作区和暂存区"><a href="#git隐藏当前工作区和暂存区" class="headerlink" title="git隐藏当前工作区和暂存区"></a>git隐藏当前工作区和暂存区</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git stash</code></pre>
-
-<h2 id="查看隐藏的工作区和暂存区"><a href="#查看隐藏的工作区和暂存区" class="headerlink" title="查看隐藏的工作区和暂存区"></a>查看隐藏的工作区和暂存区</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git stash list</code></pre>
-
-<h2 id="恢复原先的工作现场"><a href="#恢复原先的工作现场" class="headerlink" title="恢复原先的工作现场"></a>恢复原先的工作现场</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git stash apply 	&#x2F;&#x2F; 恢复后，stash内容并不删除，即list里的内容还在
+<h2 id="git查看日志">git查看日志</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git log --graph --pretty&#x3D;oneline --abbrev-commit</code></pre>
+<p><strong>--graph</strong>可以查看提交历史记录图，<strong>pretty=oneline</strong>之前介绍过，就是一行输出。<strong>abbrev-commit</strong>就是输出版本号的前几位。</p>
+<h2 id="git隐藏当前工作区和暂存区">git隐藏当前工作区和暂存区</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git stash</code></pre>
+<h2 id="查看隐藏的工作区和暂存区">查看隐藏的工作区和暂存区</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git stash list</code></pre>
+<h2 id="恢复原先的工作现场">恢复原先的工作现场</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git stash apply 	&#x2F;&#x2F; 恢复后，stash内容并不删除，即list里的内容还在
 $ git stash drop 	&#x2F;&#x2F; 删除list内容的stash@&#123;0&#125;
 $ git stash pop		&#x2F;&#x2F; 恢复的同时，把stash内容也删除。</code></pre>
-
-<h2 id="git从远程库抓取"><a href="#git从远程库抓取" class="headerlink" title="git从远程库抓取"></a>git从远程库抓取</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git pull	  &#x2F;&#x2F; 从远程库中把最新的提交抓取到本地仓库里，并合并在本地分支。
+<h2 id="git从远程库抓取">git从远程库抓取</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git pull	  &#x2F;&#x2F; 从远程库中把最新的提交抓取到本地仓库里，并合并在本地分支。
 			  &#x2F;&#x2F; 报错了，就按照提示进行本地分支和远程分支链接。</code></pre>
-
-<h2 id="新建标签"><a href="#新建标签" class="headerlink" title="新建标签"></a>新建标签</h2><p><strong>默认标签是打在最新提交的commit上的</strong></p>
+<h2 id="新建标签">新建标签</h2>
+<p><strong>默认标签是打在最新提交的commit上的</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git tag v1.0		&#x2F;&#x2F; 新建V1.0标签，默认打在最近commit上的
 $ git tag v0.9 f52c633  	&#x2F;&#x2F; 新建V0.9标签，打在版本号为f52c633的commit上</code></pre>
-
-<h2 id="查看标签详细信息"><a href="#查看标签详细信息" class="headerlink" title="查看标签详细信息"></a>查看标签详细信息</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git show V0.9		&#x2F;&#x2F; V0.9可更改</code></pre>
-
-<h2 id="创建带有说明的标签"><a href="#创建带有说明的标签" class="headerlink" title="创建带有说明的标签"></a>创建带有说明的标签</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git tag v0.1 -m &quot;version 0.1 released&quot; 1094adb	
+<h2 id="查看标签详细信息">查看标签详细信息</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git show V0.9		&#x2F;&#x2F; V0.9可更改</code></pre>
+<h2 id="创建带有说明的标签">创建带有说明的标签</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git tag v0.1 -m &quot;version 0.1 released&quot; 1094adb	
 			&#x2F;&#x2F; 新建V0.1标签，并进行说明，打在1094版本号</code></pre>
-
 <p><strong>注意</strong>：标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。</p>
-<h2 id="删除标签"><a href="#删除标签" class="headerlink" title="删除标签"></a>删除标签</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git tag -d v0.9		&#x2F;&#x2F; 删除本地标签
+<h2 id="删除标签">删除标签</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git tag -d v0.9		&#x2F;&#x2F; 删除本地标签
 $ git push origin :refs&#x2F;tags&#x2F;v0.9		&#x2F;&#x2F; 删除远程库标签</code></pre>
-
-<h2 id="推送标签"><a href="#推送标签" class="headerlink" title="推送标签"></a>推送标签</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git push origin v1.0			
+<h2 id="推送标签">推送标签</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git push origin v1.0			
 $ git push origin --tags		&#x2F;&#x2F; 一次性推送所有的本地标签到远程库</code></pre>
-
 
     </div>
 
@@ -406,6 +403,15 @@ $ git push origin --tags		&#x2F;&#x2F; 一次性推送所有的本地标签到�
 
         
 
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E4%B8%8E%E4%BE%8B%E5%AD%90/" rel="next" title="markdown常用语法与例子">
+                  markdown常用语法与例子 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
@@ -437,14 +443,14 @@ $ git push origin --tags		&#x2F;&#x2F; 一次性推送所有的本地标签到�
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">5k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">6 分钟</span>
+    <span title="站点阅读时长">17 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -492,6 +498,12 @@ $ git push origin --tags		&#x2F;&#x2F; 一次性推送所有的本地标签到�
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 <script src="/js/third-party/comments/livere.js"></script>
